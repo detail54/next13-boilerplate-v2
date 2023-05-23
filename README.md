@@ -59,4 +59,15 @@
   - Select TypeScript Version 선택
   - Use Workspace Version 선택
 
-6.
+6. jest 설정
+
+```c
+  yarn add --dev jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom
+```
+
+- root에 jest.config.js 파일생성 후 설정 코드 입력.
+- test 파일에서 toBeInTheDocument() 함수 에러 발생 -> 아래 라이브러리 설치
+
+```
+  yarn add -D @types/testing-library__jest-dom
+```
