@@ -9,7 +9,8 @@
   - next v13.4.3
   - react v18.2.0
   - typescript v5.0.4
-  -
+  - sanitize.css v13.0.0
+  - jest v29.5.0
 ```
 
 ## record of setting
@@ -71,3 +72,44 @@
 ```
   yarn add -D @types/testing-library__jest-dom
 ```
+
+7. sanitize css 설정
+
+```
+  yarn add sanitize.css
+  yarn add --dev babel-loader
+```
+
+8. PWA 설정
+
+```
+  yarn add next-pwa
+```
+
+- next.config.js 파일 수정
+
+```js
+/** @type {import('next').NextConfig} */
+const withPWA = require('next-pwa')({
+  customWorkerDir: 'src/worker',
+  dest: 'public',
+})
+
+const nextConfig = {}
+
+module.exports = withPWA(nextConfig)
+```
+
+- tsconfig.json -> lib값에 webworker 추가
+- .yarnrc.yml 파일에 아래 코드 추가
+
+```
+  packageExtensions:
+    babel-loader@*:
+      dependencies:
+        '@babel/core': '*'
+```
+
+- realfavicongenerator.net 사이트에서 PWA관련 이미지 + menifest파일 다운받아 public 폴더에 넣음.
+- app/layout.tsx에 meta data 작성.
+- build -> start 하면 다운로드 가능.
