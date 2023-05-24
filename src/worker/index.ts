@@ -3,17 +3,17 @@
 export declare const self: ServiceWorkerGlobalScope
 
 self.addEventListener('install', (e) => {
-  console.log('👀 - install', e)
+  console.log('install::: ', e)
   e.waitUntil(self.skipWaiting())
 })
 
 self.addEventListener('activate', (e) => {
-  console.log('👀 - activate', e)
+  console.log('activate::: ', e)
 })
 
 self.addEventListener('push', (e) => {
   const message = e.data?.json()
-  console.log('👀 - message', message)
+  console.log('push message::: ', message)
 
   e.waitUntil(
     self.registration.showNotification(message.sender.nickname, {
@@ -25,6 +25,7 @@ self.addEventListener('push', (e) => {
 })
 
 self.addEventListener('notificationclick', (e) => {
+  console.log('notificationclick::: ', e.notification.data)
   self.clients.openWindow(e.notification.data)
 })
 
@@ -35,5 +36,6 @@ self.addEventListener('message', (e) => {
   //     window.navigator.serviceWorker.controller.postMessage({command: 'log', message: 'hello world'})
   // OR use next-pwa injected workbox object
   //     window.workbox.messageSW({command: 'log', message: 'hello world'})
+  console.log('message::: ', e.data)
   console.log(e.data)
 })

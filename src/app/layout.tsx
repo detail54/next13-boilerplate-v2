@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name='theme-color' content='#ffffff' />
 
         <link rel='shortcut icon' href='/favicon.ico' />
-        <link rel='canonical' href='/' />
+        {/* <link rel='canonical' href='/' /> */}
         <meta name='author' content='author' />
         <meta name='keywords' content='next13-boilerplate' />
         <meta name='application-name' content='next13-boilerplate-v2' />

@@ -90,9 +90,13 @@
 
 ```js
 /** @type {import('next').NextConfig} */
+const runtimeCaching = require('next-pwa/cache')
 const withPWA = require('next-pwa')({
-  customWorkerDir: 'src/worker',
   dest: 'public',
+  register: true,
+  skipWaiting: true,
+  customWorkerDir: 'src/worker',
+  runtimeCaching,
 })
 
 const nextConfig = {}
@@ -113,3 +117,13 @@ module.exports = withPWA(nextConfig)
 - realfavicongenerator.net 사이트에서 PWA관련 이미지 + menifest파일 다운받아 public 폴더에 넣음.
 - app/layout.tsx에 meta data 작성.
 - build -> start 하면 다운로드 가능.
+
+9. PWA custom service worker 설정
+
+- 8단계에서 설정한 withPWA > customWorkerDir의 경로에 index.tsx파일 생성하여 이벤트 등록.
+
+10. next.config.js 파일 재 수정.
+
+- 현재 시점에 next13버전의 app 디렉터리를 사용하는 상태에서 pwa 적용시 서비스워커가 정상적으로 연결되지 않는 이슈가 있었음.
+- https://github.com/shadowwalker/next-pwa/issues/424#issuecomment-1399683017
+- https://github.com/Schular/next-with-pwa/ 의 next.config.js 코드 참고함.
