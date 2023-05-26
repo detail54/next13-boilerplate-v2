@@ -12,6 +12,8 @@
   - sanitize.css v13.0.0
   - jest v29.5.0
   - next-pwa v5.6.0
+  - react-query v4.29.7 (react-query-devtools v4.29.7)
+  - env-cmd v10.1.0
 ```
 
 ## record of setting
