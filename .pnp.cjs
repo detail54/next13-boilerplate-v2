@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.2.4"],\
             ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["babel-loader", "virtual:da65524a15728cba09f33d72693b1aca2ad61b32b0f25a4aac020fa4f8ba2e2735656dfa58b1e1427f48bc5f916e55b357f4f7b936190dcbd2b0a73147c63026#npm:9.1.2"],\
+            ["env-cmd", "npm:10.1.0"],\
             ["eslint", "npm:8.41.0"],\
             ["eslint-config-next", "virtual:da65524a15728cba09f33d72693b1aca2ad61b32b0f25a4aac020fa4f8ba2e2735656dfa58b1e1427f48bc5f916e55b357f4f7b936190dcbd2b0a73147c63026#npm:13.4.3"],\
             ["jest", "virtual:da65524a15728cba09f33d72693b1aca2ad61b32b0f25a4aac020fa4f8ba2e2735656dfa58b1e1427f48bc5f916e55b357f4f7b936190dcbd2b0a73147c63026#npm:29.5.0"],\
@@ -4926,6 +4927,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["commander", "npm:2.20.3"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:4.1.1", {\
+          "packageLocation": "./.yarn/cache/commander-npm-4.1.1-22a0fe921b-d7b9913ff9.zip/node_modules/commander/",\
+          "packageDependencies": [\
+            ["commander", "npm:4.1.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["common-tags", [\
@@ -5424,6 +5432,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/entities-npm-4.5.0-7cdb83b832-853f8ebd5b.zip/node_modules/entities/",\
           "packageDependencies": [\
             ["entities", "npm:4.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["env-cmd", [\
+        ["npm:10.1.0", {\
+          "packageLocation": "./.yarn/cache/env-cmd-npm-10.1.0-85470635d6-efef550742.zip/node_modules/env-cmd/",\
+          "packageDependencies": [\
+            ["env-cmd", "npm:10.1.0"],\
+            ["commander", "npm:4.1.1"],\
+            ["cross-spawn", "npm:7.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8651,6 +8670,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.2.4"],\
             ["@types/testing-library__jest-dom", "npm:5.14.5"],\
             ["babel-loader", "virtual:da65524a15728cba09f33d72693b1aca2ad61b32b0f25a4aac020fa4f8ba2e2735656dfa58b1e1427f48bc5f916e55b357f4f7b936190dcbd2b0a73147c63026#npm:9.1.2"],\
+            ["env-cmd", "npm:10.1.0"],\
             ["eslint", "npm:8.41.0"],\
             ["eslint-config-next", "virtual:da65524a15728cba09f33d72693b1aca2ad61b32b0f25a4aac020fa4f8ba2e2735656dfa58b1e1427f48bc5f916e55b357f4f7b936190dcbd2b0a73147c63026#npm:13.4.3"],\
             ["jest", "virtual:da65524a15728cba09f33d72693b1aca2ad61b32b0f25a4aac020fa4f8ba2e2735656dfa58b1e1427f48bc5f916e55b357f4f7b936190dcbd2b0a73147c63026#npm:29.5.0"],\

@@ -128,3 +128,21 @@ module.exports = withPWA(nextConfig)
 - 현재 시점에 next13버전의 app 디렉터리를 사용하는 상태에서 pwa 적용시 서비스워커가 정상적으로 연결되지 않는 이슈가 있었음.
 - https://github.com/shadowwalker/next-pwa/issues/424#issuecomment-1399683017
 - https://github.com/Schular/next-with-pwa/ 의 next.config.js 코드 참고함.
+
+11. react-query 설정
+
+```
+  yarn add @tanstack/react-query
+  yarn add @tanstack/react-query-devtools
+```
+
+- 참고 > https://tanstack.com/query/latest/docs/react/guides/ssr#queryclientprovider-is-required-by-both-the-initialdata-and-hydrate-prefetching-approaches
+
+12. api 통신관련 파일 생성
+
+- fetch함수 같은 패턴으로 사용하도록 래핑
+- 각 api별로 파일 생성하여 래핑된 fetch 호출하여 api 요청
+
+13. env파일 설정
+
+- local, development, production 파일 생성
