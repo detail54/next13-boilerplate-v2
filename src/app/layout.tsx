@@ -1,3 +1,4 @@
+import Providers from '@/common/lib/reactQuery/Providers'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -34,7 +35,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name='revisit-after' content='3 days' />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

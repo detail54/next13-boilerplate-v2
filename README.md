@@ -11,6 +11,7 @@
   - typescript v5.0.4
   - sanitize.css v13.0.0
   - jest v29.5.0
+  - next-pwa v5.6.0
 ```
 
 ## record of setting
